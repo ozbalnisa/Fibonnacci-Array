@@ -1,0 +1,34 @@
+using System.Numerics;
+
+namespace Fibonacci_Array
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            BigInteger fibonacciNumber1 = 0;
+            BigInteger fibonacciNumber2 = 1;
+            BigInteger fibonacciNumber3;
+            BigInteger n;
+
+            Console.WriteLine("Enter the number of Fibonacci terms you want: ");
+            n = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Fibonacci Number[0]: " +fibonacciNumber1);
+            Console.WriteLine("Fibonacci Number[1]: " +fibonacciNumber2);
+
+            for (int i = 0; i < n - 1; i++)
+            {
+                fibonacciNumber3 = fibonacciNumber1 + fibonacciNumber2;
+                Console.WriteLine("Fibonacci Number[" +(i+2) +"]: " +fibonacciNumber3);
+
+                fibonacciNumber1 = fibonacciNumber2;
+                fibonacciNumber2 = fibonacciNumber3;
+
+            }
+
+            Console.ReadKey();
+
+        }
+    }
+} 
